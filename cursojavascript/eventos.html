@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div onmouseover="console.log('me paso encima')"></div>
+    <div onmouseout="console.log('me corrio')"></div>
+    <button onclick="alert('me pusheo')">Click</button>
+
+    <div onmouseout='over()' id="cambio">me caes mal</div>
+</body>
+
+
+<script> 
+
+function over(){
+        document.getElementById("cambio").innerHTML = "Este es el nuevo contenido";
+        
+
+}
+
+</script>
+</html>

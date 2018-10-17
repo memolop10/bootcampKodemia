@@ -1,0 +1,14 @@
+._color{
+    background-color: blueviolet;
+    width: 100px;
+    height: 100px;
+}
+
+/* .active{
+    background-color: aqua
+} */
+
+.active, div:hover {
+    background-color: #666;
+    color: white;
+}

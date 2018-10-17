@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <title>prueba</title>
+</head>
+<body>
+
+    
+        <div class="container">
+                <div class="table-resposive">
+        
+                    <h1>tabla usuarios</h1> <br />
+        
+                    <table class="table table-bordered table-striped" id="sampleJson">
+                        <tr>
+                            <td>Nombre</td>
+                           
+                        </tr>
+        
+                    </table>
+        
+                </div>
+        
+
+            </div>
+        
+    
+</body>
+</html>
+
+<script>
+        $(document).ready(function(){
+                $.getJSON("http://qa.visionariagames.com/adminws/curso/lista",function(data){
+                        var sample_data = '';
+                        $.each(data,function(key, value){
+                            sample_data += '<tr>';
+                            sample_data += '<td>'+ value.nombre +'</td>';
+                            
+                             sample_data += '</tr>';
+                        });
+                        $('#sampleJson').append(sample_data);
+                });
+            });
+    </script>
